@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'title' %}login{% endblock 'title' %}
+{% block 'content' %}
 <form method="post">
     {% csrf_token %}
     {{form.as_p}}
@@ -10,3 +14,4 @@
 </form>
 <p><a href={% url 'accounts:signup' %}>Make account here</a></p>
 <p><a href={% url 'password_reset' %}>kheili khengi ke passwordet yadet rafte</a></p>
+{% endblock 'content' %}

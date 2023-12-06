@@ -1,3 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'title' %}signup{% endblock 'title' %}
+{% block 'content' %}
+
+
 <form method="post" enctype='multipart/form-data'>
     {% csrf_token %}
     {{form.as_p}}
@@ -9,3 +15,4 @@
         {% endfor %}
     {% endif %}
 </form>
+{% endblock 'content' %}
